@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
 	entry: './src/index.js',
@@ -14,7 +15,8 @@ module.exports = {
 			title: 'RSS Virtual Keyboard',
 			filename: 'index.html',
 			template: 'src/index.html'
-		})
+		}),
+		new MiniCssExtractPlugin(),
 	],
 	module: {
 		rules: [
@@ -22,7 +24,7 @@ module.exports = {
 				test: /\.s[ac]ss$/i,
 				use: [
 					// Creates `style` nodes from JS strings
-					"style-loader",
+					MiniCssExtractPlugin.loader,
 					// Translates CSS into CommonJS
 					"css-loader",
 					// Compiles Sass to CSS
@@ -37,7 +39,10 @@ module.exports = {
 	},
 	devServer: {
 		static: './dist',
-		port: 3002,
+		port: 8080,
+		hot: true,
+		open: true,
+		watchFiles: ["src/**/*.html"],
 	},
 
 };
