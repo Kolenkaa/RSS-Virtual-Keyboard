@@ -1,0 +1,72 @@
+/*!*********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss ***!
+  \*********************************************************************************************************/
+.hidden {
+  display: none; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+
+#textArea {
+  width: 800px;
+  min-height: 200px;
+  margin: 50px auto; }
+
+.keyboard {
+  width: 920px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: dimgray;
+  border-radius: 5px; }
+
+.row {
+  display: flex;
+  margin-bottom: 10px; }
+
+.key {
+  cursor: pointer;
+  text-align: center;
+  font-weight: 700;
+  line-height: 50px;
+  font-size: 20px;
+  color: black;
+  background-color: #b4aa9a;
+  min-width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 5px; }
+
+.key.Backspace {
+  width: 112px; }
+
+.key.CapsLock {
+  width: 112px; }
+
+.key.Enter {
+  width: 112px; }
+
+.key.ShiftLeft {
+  width: 112px; }
+
+.key.ShiftRight {
+  width: 112px; }
+
+.key.Space {
+  width: 450px; }
+
+.key:not(:last-child) {
+  margin-right: 10px; }
+
+.key.active {
+  background-color: cadetblue;
+  transform: scale(1.1); }
+
+.key.Space.active {
+  transform: scale(1.03); }
+
+p {
+  text-align: center; }
+
