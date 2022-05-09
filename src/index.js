@@ -166,7 +166,7 @@ keyboard.addEventListener('mousedown', (e) => {
 			break;
 		case 'Tab':
 			addActive(element);
-			textArea.value += '  ';
+			textArea.value += '\t';
 			break;
 		case 'Enter':
 			addActive(element);
@@ -226,6 +226,9 @@ document.addEventListener('mouseup', (e) => {
 			removeActive(element);
 			changeLowerOrUpperCase();
 			break;
+		case 'Tab':
+			removeActive(element);
+			break;
 		case 'CapsLock':
 			if (capslock !== true) {
 				removeActive(e.target.closest('.key'));
@@ -254,7 +257,7 @@ document.addEventListener('keydown', (e) => {
 			break;
 		case 'Tab':
 			addActive(element);
-			textArea.value += '    ';
+			textArea.value += '\t';
 			break;
 		case 'Enter':
 			addActive(element);
@@ -306,6 +309,9 @@ document.addEventListener('keyup', (e) => {
 		case 'ShiftRight':
 			removeActive(element);
 			changeLowerOrUpperCase();
+			break;
+		case 'Tab':
+			removeActive(element);
 			break;
 	}
 });
