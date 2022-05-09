@@ -46,9 +46,6 @@
 .key.Enter {
 	width: 112px;
 }
-.key.CapsLock {
-	width: 112px;
-}
 .key.ShiftLeft {
 	width: 112px;
 }
@@ -61,4 +58,14 @@
 
 .key:not(:last-child) {
 	margin-right: 10px;
+}
+.key.active {
+	background-color:cadetblue;
+	transform: scale(1.1);
+}
+.key.Space.active {
+	transform: scale(1.03);
+}
+p {
+	text-align: center;
 }
